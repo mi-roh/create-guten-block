@@ -12,3 +12,5 @@
  * matching Files /interaction\.(js|jsx|mjs)$/
  */
 
+// Load interactions of blocks manually until importer dose the job
+import './block/interaction.js';
