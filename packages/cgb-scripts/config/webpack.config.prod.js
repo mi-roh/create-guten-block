@@ -77,6 +77,7 @@ const extractConfig = {
 module.exports = {
 	entry: {
         './dist/blocks': paths.pluginBlocksJs, // 'name' : 'path/file.ext'.
+        './dist/blocks.interaction': paths.pluginBlocksInteractionJs, // 'name' : 'path/file.ext'.
 	},
 	output: {
 		// Add /* filename */ comments to generated require()s in the output.

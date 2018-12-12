@@ -20,6 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 function <% blockNamePHPLower %>_cgb_block_assets() { // phpcs:ignore
+	// Scripts.
+	if ( ! is_admin() ) { // currently already loaded in block.buid.js in the editor
+		wp_enqueue_script(
+			'<% blockNamePHPLower %>-cgb-interaction-js', // Handle.
+			plugins_url( 'dist/blocks.interaction.build.js', dirname( __FILE__ ) ), // block.interaction.build.js: We register the frontend code hier. Built with Webpack.
+			array(), // Dependency, defined above.
+			// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' ), // Version: File modification time.
+			true // Enqueue the script in the footer.
+		);
+	}
+
 	// Styles.
 	wp_enqueue_style(
 		'<% blockNamePHPLower %>-cgb-style-css', // Handle.
