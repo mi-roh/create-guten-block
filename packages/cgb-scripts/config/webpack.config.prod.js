@@ -135,6 +135,7 @@ module.exports = {
 			},
 			mangle: {
 				safari10: true,
+				except: ['__', '_n', '_x', '_nx' ],
 			},
 			output: {
 				comments: false,
